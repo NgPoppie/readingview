@@ -1,0 +1,115 @@
+<MainWidget>:
+    orientation: 'vertical'
+    padding: app.PADDING
+    spacing: app.SPACING
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1  # White background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: app.BUTTON_HEIGHT
+
+        Label:
+            id: status_label_top
+            size_hint_y: None
+            height: app.BUTTON_HEIGHT
+            color: 0, 0, 0, 1  # Black text color
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: 200
+            spacing: app.SPACING
+
+            Spinner:
+                id: sort_spinner
+                text: "Sort by"
+                values: ["title", "author", "number_of_pages", "is_completed"]
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+
+            Label:
+                text: "Title:"
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                color: 0, 0, 0, 1  # Black text color
+
+            TextInput:
+                id: title_input
+                multiline: False
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                background_color: 1, 1, 1, 1  # White background
+                foreground_color: 0, 0, 0, 1  # Black text color
+
+            Label:
+                text: "Author:"
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                color: 0, 0, 0, 1  # Black text color
+
+            TextInput:
+                id: author_input
+                multiline: False
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                background_color: 1, 1, 1, 1  # White background
+                foreground_color: 0, 0, 0, 1  # Black text color
+
+            Label:
+                text: "Pages:"
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                color: 0, 0, 0, 1  # Black text color
+
+            TextInput:
+                id: pages_input
+                multiline: False
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                background_color: 1, 1, 1, 1  # White background
+                foreground_color: 0, 0, 0, 1  # Black text color
+
+            Button:
+                id: add_button
+                text: "Add Book"
+                size_hint_y: None
+                height: app.BUTTON_HEIGHT
+                width: 150
+                pos_hint: {'center_x': 0.5}
+
+        ScrollView:
+            GridLayout:
+                id: book_list
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: app.BUTTON_HEIGHT
+                row_force_default: True
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: app.BUTTON_HEIGHT
+
+        Button:
+            id: clear_button
+            text: "Clear"
+            size_hint_y: None
+            height: app.BUTTON_HEIGHT
+            width: 150
+            pos_hint: {'right': 1}
+
+        Label:
+            id: status_label_bottom
+            size_hint_y: None
+            height: app.BUTTON_HEIGHT
+            color: 0, 0, 0, 1  # Black text color

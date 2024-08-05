@@ -1,0 +1,32 @@
+[
+    {
+        "title": "ree",
+        "author": "rfe",
+        "number_of_pages": 12,
+        "is_completed": false
+    },
+    {
+        "title": "Never Give up",
+        "author": "Donald Trump",
+        "number_of_pages": 250,
+        "is_completed": false
+    },
+    {
+        "title": "Romeo and Julia",
+        "author": "William Shakespear",
+        "number_of_pages": 300,
+        "is_completed": false
+    },
+    {
+        "title": "The 50th law",
+        "author": "Robert Greene",
+        "number_of_pages": 500,
+        "is_completed": true
+    },
+    {
+        "title": "efw",
+        "author": "dewasd",
+        "number_of_pages": 900,
+        "is_completed": false
+    }
+]
